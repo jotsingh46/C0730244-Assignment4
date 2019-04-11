@@ -18,9 +18,9 @@ namespace C0730244_Assignment4
             p.Run();
             string text = System.IO.File.ReadAllText("U:/Users/730244/New folder/Beowulf.txt");
             p.FindNumberOfBlankSpaces(text);
+
+
             
-
-
         }
         public void Run()
         {
@@ -82,10 +82,10 @@ namespace C0730244_Assignment4
                     counter++;
               }
               file.Close();
-              Console.WriteLine("=======================================================================");
+              //Console.WriteLine("=======================================================================");
               Console.WriteLine($"File has {counter} lines.");
-              Console.ReadLine(); 
-           }
+              Console.ReadLine();
+            }
         }
 
         public int FindNumberOfBlankSpaces(string line)
