@@ -1,9 +1,9 @@
-How many lines in total are ther ein the file:
+How many lines in total are ther ein the file: 4016
 
-How mant words are there in the file:
+How mant words are there in the file: 42891
 
-Line numbers of the lines which contain both of these words Sea and fare:
+Line numbers of the lines which contain both of these words Sea and fare: 10
 
-Line numbers of the lines which contain the word fare without the word war:
+Line numbers of the lines which contain the word fare without the word war: 14
 
-Average number of letters per word returned as a float:
+Average number of letters per word returned as a float: 4.7
