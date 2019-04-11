@@ -16,6 +16,10 @@ namespace C0730244_Assignment4
            Program p = new Program();
            p.Beowulf = new ArrayList();
             p.Run();
+            string text = System.IO.File.ReadAllText("U:/Users/730244/New folder/Beowulf.txt");
+            p.FindNumberOfBlankSpaces(text);
+            
+
 
         }
         public void Run()
@@ -26,6 +30,7 @@ namespace C0730244_Assignment4
         public void ProcessArrayList()
         {
             int LineNumber = 0;
+            int LineNumber2 = 0;
             foreach(var line in Beowulf)
             {
                 
@@ -33,11 +38,22 @@ namespace C0730244_Assignment4
                 if(ContainsWord( line.ToString().ToLower(), "sea")&& ContainsWord(line.ToString().ToLower(), "fare"))
                 {
                     Console.WriteLine("line number is {0}", LineNumber);
-                    Console.WriteLine(line);
                     LineNumber++;
                 }
             }
-            Console.WriteLine(LineNumber);
+            Console.WriteLine("Total number of lines that contains words sea and fare is "+ LineNumber);
+
+            Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            foreach (var line in Beowulf)
+            {
+                if (ContainsWord(line.ToString().ToLower(), "fare") && !ContainsWord(line.ToString().ToLower(), "war"))
+                {
+                    Console.WriteLine("line number is {0}", LineNumber2);
+                    LineNumber2++;
+                }
+            }
+            Console.WriteLine("Total number of lines that contains words fare without war is " + LineNumber2);
+            Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
         }
         public bool ContainsWord(string line, string word)
         {
@@ -55,7 +71,7 @@ namespace C0730244_Assignment4
             // Read file using streamReader. Reads file line by line
            using (StreamReader file = new StreamReader("U:/Users/730244/New folder/Beowulf.txt"))
            {
-              int words = 1;
+              //int words = 1;
               int counter = 0;
               string ln;
 
@@ -81,7 +97,9 @@ namespace C0730244_Assignment4
             {
                 if(char.IsLetter(c)) { countletters++; }
                 if(char.IsWhiteSpace(c)) { countSpaces++; }
-            }
+            } 
+            Console.WriteLine("Number of words: " + countSpaces);
+            Console.WriteLine("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             return countSpaces;
         }
     }
