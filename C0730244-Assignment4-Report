@@ -1,0 +1,9 @@
+How many lines in total are ther ein the file:
+
+How mant words are there in the file:
+
+Line numbers of the lines which contain both of these words Sea and fare:
+
+Line numbers of the lines which contain the word fare without the word war:
+
+Average number of letters per word returned as a float:
