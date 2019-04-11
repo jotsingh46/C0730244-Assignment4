@@ -11,7 +11,7 @@ namespace C0730244_Assignment4
     {
         static void Main(string[] args)
         {
-            ArrayList Beowulf;
+           ArrayList Beowulf;
         }
     }
 }
